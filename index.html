@@ -25,6 +25,34 @@
         });
       });
     });
+
+    function getGreeting() {
+    const hour = new Date().getHours();
+    if (hour < 12) return "Good morning ☀️";
+    if (hour < 18) return "Good afternoon 🌤️";
+    if (hour < 22) return "Good evening 🌙";
+    return "Up late? 🌌";
+  }
+
+  function updateGreeting() {
+    document.getElementById("greeting").textContent = getGreeting();
+  }
+
+  updateGreeting();
+  setInterval(updateGreeting, 60000); // refresh every minute
+
+  const audio = document.getElementById("lofiAudio");
+  const toggleBtn = document.getElementById("vibeToggle");
+
+  toggleBtn.addEventListener("click", () => {
+    if (audio.paused) {
+      audio.play();
+      toggleBtn.textContent = "Pause the vibe 🎧";
+    } else {
+      audio.pause();
+      toggleBtn.textContent = "Play some chill 🎧";
+    }
+  });
   </script>
   <style>
     .drop-shadow-glow {
@@ -38,6 +66,8 @@
     .animate-pop {
       animation: pop 0.3s ease-in-out;
     }
+
+    
   </style>
 </head>
 <body class="bg-gradient-to-br from-pink-500 via-black to-black text-white font-mono overflow-x-hidden">
@@ -70,7 +100,7 @@
 </div>
  
  
-  <!-- Text content with animated border -->
+  
   <div class="text-pink-100 max-w-xl p-10 border-2 border-pink-400 rounded-lg relative overflow-hidden">
     <h1 class="text-3xl md:text-5xl font-bold mb-4 text-pink-400">Hi, I'm Noluthando.</h1>
     <p class="text-sm md:text-base leading-relaxed">
@@ -160,7 +190,7 @@
           <div class="p-4">
             <h3 class="text-xl font-bold mb-2 text-pink-400">thandolwethu foundation</h3>
             <p class="text-pink-100 mb-2">I had the privilege of designing and developing a WordPress website for a non-governmental organization committed to distributing sanitary pads to girls in underserved communities. This project involved creating an accessible, informative, and user-friendly platform that effectively communicates the NGO's mission and services. Key features of the site include, Responsive Design, Ensured seamless accessibility across various devices, enhancing user engagement. Donation Integration, Implemented secure online donation capabilities to support fundraising efforts. Educational Resources, Developed sections providing information on menstrual health and hygiene. Volunteer Portal, Created a user-friendly interface for volunteer sign-ups and participation. This project underscores my ability to leverage WordPress to build impactful websites that support meaningful causes.</p>
-            <a href="" target="https://e24ac4d7.nolulovescafe23.pages.dev/" class="bg-pink-500 hover:bg-pink-600 text-white font-semibold py-2 px-6 rounded  flex justify-center">Demo</a>
+            <a href="https://thandolwethufoundation.wordpress.com/" class="bg-pink-500 hover:bg-pink-600 text-white font-semibold py-2 px-6 rounded  flex justify-center">Demo</a>
           </div>
         </div>
 
@@ -169,7 +199,7 @@
           <div class="p-4">
             <h3 class="text-xl font-bold mb-2 text-pink-400">Al projects portfolio<h3>
             <p class="text-pink-100 mb-2"> I recently designed a comprehensive portfolio using Canva to showcase my AI projects. This portfolio reflects my journey and expertise in artificial intelligence, highlighting key projects and their real-world applications. Each project is presented with detailed descriptions, objectives, methodologies, and outcomes, providing a clear understanding of my approach and problem-solving skills. Utilizing Canva's design capabilities, I incorporated visuals, diagrams, and infographics to effectively communicate complex AI concepts. The portfolio includes links to live demonstrations and GitHub repositories, allowing for an in-depth exploration of the projects. This Canva-designed portfolio not only underscores my technical proficiency but also demonstrates my ability to convey intricate information through engaging and accessible design.</p>
-            <a href="" target="https://e24ac4d7.nolulovescafe23.pages.dev/" class="bg-pink-500 hover:bg-pink-600 text-white font-semibold py-2 px-6 rounded  flex justify-center">Demo</a>
+            <a href="https://www.canva.com/design/DAGVjMoXKZs/TeUO7lqgpOvgINdbYrPqQA/edit" class="bg-pink-500 hover:bg-pink-600 text-white font-semibold py-2 px-6 rounded  flex justify-center">Demo</a>
           </div>
         </div>
 
@@ -180,6 +210,12 @@
       <p class="text-pink-100">Available for freelance and full-time roles. Reach out via <a href="mailto:noluthandotinyiko@gmail.com" class="text-pink-300 hover:underline">email</a> or <a href="https://www.linkedin.com/in/msmolui-b718ab320/" target="_blank" class="text-pink-300 hover:underline">LinkedIn</a>.</p>
     </section>
   </main>
-  <footer class=" g-pink-500  text-white font-semibold py-2 px-6 rounded  flex justify-center ">404: Footer creativity not found... jk, Thando</footer>
+ <footer class="w-full py-8 text-center text-sm text-zinc-500">
+  <div id="greeting" class="animate-bounce-slow mb-2"></div>
+  <p class="italic">
+    A digital garden tended by Thando 🌱 – come back, it grows.
+  </p>
+</footer>
+
 </body>
 </html>
