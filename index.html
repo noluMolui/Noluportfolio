@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Developer Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Glow effect on nav links
+      document.querySelectorAll('nav a').forEach(link => {
+        link.addEventListener('mouseenter', () => {
+          link.classList.add('drop-shadow-glow');
+        });
+        link.addEventListener('mouseleave', () => {
+          link.classList.remove('drop-shadow-glow');
+        });
+      });
+
+      // Animation on project image click
+      document.querySelectorAll('.project-card img').forEach(img => {
+        img.addEventListener('click', () => {
+          img.classList.add('animate-pop');
+          setTimeout(() => img.classList.remove('animate-pop'), 300);
+        });
+      });
+    });
+  </script>
+  <style>
+    .drop-shadow-glow {
+      text-shadow: 0 0 8px #ff69b4;
+    }
+    @keyframes pop {
+      0% { transform: scale(1); filter: hue-rotate(0deg); }
+      50% { transform: scale(1.1); filter: hue-rotate(45deg); }
+      100% { transform: scale(1); filter: hue-rotate(0deg); }
+    }
+    .animate-pop {
+      animation: pop 0.3s ease-in-out;
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-br from-pink-500 via-black to-black text-white font-mono overflow-x-hidden">
+
+
+  <header class="bg-black bg-opacity-70 shadow-md sticky top-0 z-50">
+    <nav class="max-w-6xl mx-auto flex justify-between items-center p-4">
+      <span class="text-xl font-bold text-pink-400">Noluthando Molui</span>
+      <ul class="flex space-x-6 text-sm md:text-base">
+        <li><a href="#about" class="hover:text-pink-300">About</a></li>
+        <li><a href="#skills" class="hover:text-pink-300">Skills</a></li>
+        <li><a href="#projects" class="hover:text-pink-300">Projects</a></li>
+        <li><a href="#contact" class="hover:text-pink-300">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="max-w-6xl mx-auto p-6 md:p-12">
+    <section id="about" class="mb-12 max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-8 px-4">
+  <!-- Your Profile Image -->
+<div class="flex flex-col items-center space-y-4">
+  <img src="/images/meme.jpg" alt="Alex Profile" class="w-64 h-64 rounded-full border-4 border-pink-400 shadow-lg object-cover" />
+  
+  <a href="images/N.Molui.RESUME (2) (1).pdf" download class="inline-flex items-center px-4 py-2 bg-pink-500 hover:bg-pink-600 text-white font-semibold rounded-lg shadow transition">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
+    </svg>
+    Download Resume
+  </a>
+</div>
+ 
+ 
+  <!-- Text content with animated border -->
+  <div class="text-pink-100 max-w-xl p-10 border-2 border-pink-400 rounded-lg relative overflow-hidden">
+    <h1 class="text-3xl md:text-5xl font-bold mb-4 text-pink-400">Hi, I'm Noluthando.</h1>
+    <p class="text-sm md:text-base leading-relaxed">
+      As a passionate developer, I have built a strong foundation in HTML, CSS, JavaScript, and WordPress. My journey began with the SheCodes bootcamp, where I gained hands-on experience in web development. Driven by a commitment to continuous learning, I further expanded my skills through self-directed study, utilizing resources like YouTube tutorials and contributing to various projects on GitHub.
+      <br><br>
+      In addition to my web development expertise, I have a keen interest in artificial intelligence. To deepen my understanding, I pursued the AI Career Essentials (AiCE) program offered by ALX. This program has enhanced my ability to integrate AI tools into my projects. My portfolio showcases a range of projects that reflect my dedication to creating engaging, user-friendly websites. I am eager to bring my technical expertise and enthusiasm for innovation to a dynamic team, contributing to impactful projects that leverage both web development and AI technologies.
+    </p>
+  </div>
+</section>
+
+    <section id="skills" class="mb-12">
+      <h2 class="text-2xl font-semibold mb-4 text-pink-300 text-center">Skills</h2>
+      <div class="text-pink-100 grid md:grid-cols-3 gap-10 place-items-center v-screen p-4 pb-12">
+
+        <div> 
+            <h3 >Technical skills</h3>
+        <ul>
+          <li>HTML</li>
+          <li>CSS</li>
+            <li>Tailwind CSS</li>
+          <li>JavaScript</li>
+          <li>WordPress</li>
+          <li>React</li>
+          <li>Node.js</li>
+          <li>Git & GitHub</li>
+          <li>Responsive Design</li>
+          <li>RESTful APIs</li>
+        </div>
+
+       <div>
+        <h3>Soft skilss</h3>
+        <ul><li>Communication</li>
+             <li>Problem Solving</li>
+              <li>Adaptability</li>
+              <li>Creativity</li>
+              <li>Attention to Detail</li>
+              <li>Time Management</li>
+              <li>Self-Motivation</li></ul>
+       </div>
+      </div>
+
+    <section id="projects">
+      <h2 class="text-2xl font-semibold mb-6 text-pink-300 text-center" >Projects</h2>
+      <div class="grid gap-8 md:grid-cols-2">
+        <div class="project-card bg-black bg-opacity-50 border border-pink-600 rounded-xl overflow-hidden">
+          <img src="/images/ts innovation.png" alt="Project laptop Repair" class="w-full h-48 object-cover cursor-pointer" />
+          <div class="p-4">
+            <h3 class="text-xl font-bold mb-2 text-pink-400">Laptop Repair Booking Site</h3>
+            <p class="text-pink-100 mb-2">A task management tool for remote teams.</p>
+            <p class="text-sm text-pink-200 mb-1">Role: Full-stack development</p>
+            <p class="text-sm text-pink-200 mb-2">Stack: Next.js, TypeScript, Tailwind CSS, MongoDB</p>
+            <a href="" target="https://ts-innovations-style.pages.dev/" class="text-pink-300 hover:underline">Demo</a>
+          </div>
+        </div>
+
+        <div class="project-card bg-black bg-opacity-50 border border-pink-600 rounded-xl overflow-hidden">
+          <img src="images/perfumeApp (1).png" alt="eccomoerce" class="w-full h-48 object-cover cursor-pointer" />
+          <div class="p-4">
+            <h3 class="text-xl font-bold mb-2 text-pink-400">E-commerce perfume Website</h3>
+            <p class="text-pink-100 mb-2">A snippet sharing platform for developers.</p>
+            <p class="text-sm text-pink-200 mb-1">Role: Frontend development</p>
+            <p class="text-sm text-pink-200 mb-2">Stack: React, Firebase, Chakra UI</p>
+            <a href="https://favperfume-store.netlify.app/" target="_blank" class="text-pink-300 hover:underline">Demo</a>
+          </div>
+        </div>
+
+        <div class="project-card bg-black bg-opacity-50 border border-pink-600 rounded-xl overflow-hidden">
+          <img src="/images/beutyoasis.png" alt="beutyoasis" class="w-full h-48 object-cover cursor-pointer" />
+          <div class="p-4">
+            <h3 class="text-xl font-bold mb-2 text-pink-400">API Tracker</h3>
+            <p class="text-pink-100 mb-2">Dashboard to monitor API uptime and performance.</p>
+            <p class="text-sm text-pink-200 mb-1">Role: Backend development</p>
+            <p class="text-sm text-pink-200 mb-2">Stack: Express.js, PostgreSQL, Docker</p>
+            <a href="https://e7f20dba.beauty-oasishair.pages.dev/" target="_blank" class="text-pink-300 hover:underline">Demo</a>
+          </div>
+
+        </div>
+        
+        <div class="project-card bg-black bg-opacity-50 border border-pink-600 rounded-xl overflow-hidden">
+          <img src="images/Ncafe.png" alt="Project laptop Repair" class="w-full h-48 object-cover cursor-pointer" />
+          <div class="p-4">
+            <h3 class="text-xl font-bold mb-2 text-pink-400">Nolulove’s Cafe site.</h3>
+            <p class="text-pink-100 mb-2">A task management tool for remote teams.</p>
+            <p class="text-sm text-pink-200 mb-1">Role: Full-stack development</p>
+            <p class="text-sm text-pink-200 mb-2">Stack: Next.js, TypeScript, Tailwind CSS, MongoDB</p>
+            <a href="" target="https://e24ac4d7.nolulovescafe23.pages.dev/" class="text-pink-300 hover:underline">Demo</a>
+          </div>
+        </div>
+
+        <div class="project-card bg-black bg-opacity-50 border border-pink-600 rounded-xl overflow-hidden">
+          <img src="images/thandolwethufoundation.wordpress.com_ (1).png" alt="Project laptop Repair" class="w-full h-48 object-cover cursor-pointer" />
+          <div class="p-4">
+            <h3 class="text-xl font-bold mb-2 text-pink-400">Nolulove’s Cafe site.</h3>
+            <p class="text-pink-100 mb-2">A task management tool for remote teams.</p>
+            <p class="text-sm text-pink-200 mb-1">Role: Full-stack development</p>
+            <p class="text-sm text-pink-200 mb-2">Stack: Next.js, TypeScript, Tailwind CSS, MongoDB</p>
+            <a href="" target="https://e24ac4d7.nolulovescafe23.pages.dev/" class="text-pink-300 hover:underline">Demo</a>
+          </div>
+        </div>
+
+     <div class="project-card bg-black bg-opacity-50 border border-pink-600 rounded-xl overflow-hidden">
+          <img src="images/www.canva.com_design_DAGVjMoXKZs_TeUO7lqgpOvgINdbYrPqQA_edit (1).png" alt="Project laptop Repair" class="w-full h-48 object-cover cursor-pointer" />
+          <div class="p-4">
+            <h3 class="text-xl font-bold mb-2 text-pink-400">Nolulove’s Cafe site.</h3>
+            <p class="text-pink-100 mb-2">A task management tool for remote teams.</p>
+            <p class="text-sm text-pink-200 mb-1">Role: Full-stack development</p>
+            <p class="text-sm text-pink-200 mb-2">Stack: Next.js, TypeScript, Tailwind CSS, MongoDB</p>
+            <a href="" target="https://e24ac4d7.nolulovescafe23.pages.dev/" class="text-pink-300 hover:underline">Demo</a>
+          </div>
+        </div>
+
+    </section>
+
+    <section id="contact" class="mt-16">
+      <h2 class="text-2xl font-semibold mb-4 text-pink-300">Contact</h2>
+      <p class="text-pink-100">Available for freelance and full-time roles. Reach out via <a href="mailto:noluthandotinyiko@gmail.com" class="text-pink-300 hover:underline">email</a> or <a href="https://www.linkedin.com/in/msmolui-b718ab320/" target="_blank" class="text-pink-300 hover:underline">LinkedIn</a>.</p>
+    </section>
+  </main>
+</body>
+</html>
