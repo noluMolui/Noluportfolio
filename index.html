@@ -11,19 +11,21 @@
     .drop-shadow-glow {
       text-shadow: 0 0 8px #ff69b4;
     }
-    @keyframes pop {
-      0% { transform: scale(1); filter: hue-rotate(0deg); }
-      50% { transform: scale(1.1); filter: hue-rotate(45deg); }
-      100% { transform: scale(1); filter: hue-rotate(0deg); }
-    }
-    .animate-pop {
-      animation: pop 0.3s ease-in-out;
-    }
 
+
+@keyframes pop {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+  }
+
+  .hover\:animate-pop:hover {
+    animation: pop 0.5s ease-in-out;
+  }
     
   </style>
 </head>
-<body class="bg-gradient-to-br from-pink-500 via-black to-black text-white font-mono overflow-x-hidden">
+<body class="bg-gradient-to-br from-pink-500 via-black to-black text-white font-mono overflow-x-hidden items-center">
 
 
   <header class="bg-black bg-opacity-70 shadow-md sticky top-0 z-50">
@@ -55,7 +57,8 @@
  
   
   <div class="text-pink-100 max-w-xl p-10 border-2 border-pink-400 rounded-lg relative overflow-hidden">
-    <h1 class="text-3xl md:text-5xl font-bold mb-4 text-pink-400">Hi, I'm Noluthando.</h1>
+    <h1 class="text-3xl md:text-5xl font-bold mb-4 text-pink-400"> 
+      Hi, I'm Noluthando.</h1>
     <p class="text-sm md:text-base leading-relaxed">
       As a passionate developer, I have built a strong foundation in HTML, CSS, JavaScript, and WordPress. My journey began with the SheCodes bootcamp, where I gained hands-on experience in web development. Driven by a commitment to continuous learning, I further expanded my skills through self-directed study, utilizing resources like YouTube tutorials and contributing to various projects on GitHub.
       <br><br>
@@ -100,7 +103,7 @@
       <h2 class="text-2xl font-semibold mb-6 text-pink-300 text-center" >Projects</h2>
       <div class="grid gap-8 md:grid-cols-2">
         <div class="project-card bg-black bg-opacity-50 border border-pink-600 rounded-xl overflow-hidden">
-          <img src="/images/ts innovation.png" alt="Project laptop Repair" class="object-cover cursor-pointer h-50 w-70"/>
+          <img src="/images/ts innovation.png" alt="Project laptop Repair" class="object-cover cursor-pointer h-50 w-70 rounded-lg hover:animate-pop"/>
           <div class="p-4">
             <h3 class="text-xl font-bold mb-2 text-pink-400">Laptop Repair Booking Site</h3>
             <p class="text-pink-100 mb-2">Developed a responsive and user-friendly website for booking laptop repair services using HTML, CSS3, and JavaScript. Implemented a seamless booking system that sends requests directly to the team via email or WhatsApp, enhancing customer convenience. Integrated a live chat feature to provide real-time customer support and assistance. Ensured cross-browser compatibility and optimized the site for mobile devices, improving accessibility and user experience.Worked on front-end design and functionality to create a modern and visually appealing interface.</p>
@@ -110,7 +113,7 @@
         </div>
 
         <div class="project-card bg-black bg-opacity-50 border border-pink-600 rounded-xl overflow-hidden">
-          <img src="images/perfumeApp (1).png" alt="eccomoerce" class="w-70 h-50 object-cover cursor-pointer" />
+          <img src="images/perfumeApp (1).png" alt="eccomoerce" class="w-70 h-50 object-cover cursor-pointer rounded-lg hover:animate-pop" />
           <div class="p-4">
             <h3 class="text-xl font-bold mb-2 text-pink-400">E-commerce perfume Website</h3>
             <p class="text-pink-100 mb-2">Designed and developed a multi-page e-commerce website using React, focused on delivering a smooth and interactive shopping experience. Built dynamic product listings, product detail pages, and a fully functional shopping cart with add and remove capabilities using React state management. Implemented React Router for seamless navigation across multiple pages, enhancing the user experience. Focused heavily on styling to create a 
@@ -120,7 +123,7 @@
         </div>
 
         <div class="project-card bg-black bg-opacity-50 border border-pink-600 rounded-xl overflow-hidden">
-          <img src="/images/beutyoasis.png" alt="beutyoasis" class="w-70 h-50 object-cover cursor-pointer" />
+          <img src="/images/beutyoasis.png" alt="beutyoasis" class="w-70 h-50 object-cover cursor-pointer rounded-lg hover:animate-pop" />
           <div class="p-4">
             <h3 class="text-xl font-bold mb-2 text-pink-400">beauty-oasis hair online store</h3>
             <p class="text-pink-100 mb-2">Designed and developed an engaging and visually appealing website for Beauty Oasis Weaves, ensuring seamless navigation and user experience. Utilized HTML, CSS, and JavaScript to create interactive and dynamic web pages, including product listings, shopping cart functionality, and contact forms. Integrated Google Fonts and Font Awesome icons to enhance the website's aesthetics and functionality. Implemented responsive design principles to ensure the website is accessible and visually appealing on various devices and screen sizes. Conducted thorough testing and debugging to ensure the website's performance and functionality were optimized. Managed content updates and maintenance tasks, ensuring the website remained current and relevant</p>
@@ -130,7 +133,7 @@
         </div>
         
         <div class="project-card bg-black bg-opacity-50 border border-pink-600 rounded-xl overflow-hidden">
-          <img src="images/Ncafe.png" alt="Project laptop Repair" class="w-70 h-50 object-cover cursor-pointer" />
+          <img src="images/Ncafe.png" alt="Project laptop Repair" class="w-70 h-50 object-cover cursor-pointer rounded-lg hover:animate-pop" />
           <div class="p-4">
             <h3 class="text-xl font-bold mb-2 text-pink-400">Nolulove’s Cafe site.</h3>
             <p class="text-pink-100 mb-2">Developed a responsive café website using HTML, CSS, and JavaScript, ensuring optimal viewing on various devices with media queries. Integrated Google Fonts and Font Awesome icons for enhanced visual appeal and functionality. Conducted thorough testing, managed content updates, and maintained site performance and usability.</p>
@@ -139,7 +142,7 @@
         </div>
 
         <div class="project-card bg-black bg-opacity-50 border border-pink-600 rounded-xl overflow-hidden">
-          <img src="images/thandolwethufoundation.wordpress.com_ (1).png" alt="Project laptop Repair" class="w-70 h-50 object-cover cursor-pointer" />
+          <img src="images/thandolwethufoundation.wordpress.com_ (1).png" alt="Project laptop Repair" class="w-70 h-50 object-cover cursor-pointer rounded-lg hover:animate-pop" />
           <div class="p-4">
             <h3 class="text-xl font-bold mb-2 text-pink-400">thandolwethu foundation</h3>
             <p class="text-pink-100 mb-2">I had the privilege of designing and developing a WordPress website for a non-governmental organization committed to distributing sanitary pads to girls in underserved communities. This project involved creating an accessible, informative, and user-friendly platform that effectively communicates the NGO's mission and services. Key features of the site include, Responsive Design, Ensured seamless accessibility across various devices, enhancing user engagement. Donation Integration, Implemented secure online donation capabilities to support fundraising efforts. Educational Resources, Developed sections providing information on menstrual health and hygiene. Volunteer Portal, Created a user-friendly interface for volunteer sign-ups and participation. This project underscores my ability to leverage WordPress to build impactful websites that support meaningful causes.</p>
@@ -148,7 +151,7 @@
         </div>
 
      <div class="project-card bg-black bg-opacity-50 border border-pink-600 rounded-xl overflow-hidden">
-          <img src="images/www.canva.com_design_DAGVjMoXKZs_TeUO7lqgpOvgINdbYrPqQA_edit (1).png" alt="Project laptop Repair" class="w-70 h-50 object-cover cursor-pointer" />
+          <img src="images/www.canva.com_design_DAGVjMoXKZs_TeUO7lqgpOvgINdbYrPqQA_edit (1).png" alt="Project laptop Repair" class="w-70 h-50 object-cover cursor-pointer rounded-lg hover:animate-pop />
           <div class="p-4">
             <h3 class="text-xl font-bold mb-2 text-pink-400">Al projects portfolio<h3>
             <p class="text-pink-100 mb-2"> I recently designed a comprehensive portfolio using Canva to showcase my AI projects. This portfolio reflects my journey and expertise in artificial intelligence, highlighting key projects and their real-world applications. Each project is presented with detailed descriptions, objectives, methodologies, and outcomes, providing a clear understanding of my approach and problem-solving skills. Utilizing Canva's design capabilities, I incorporated visuals, diagrams, and infographics to effectively communicate complex AI concepts. The portfolio includes links to live demonstrations and GitHub repositories, allowing for an in-depth exploration of the projects. This Canva-designed portfolio not only underscores my technical proficiency but also demonstrates my ability to convey intricate information through engaging and accessible design.</p>
@@ -158,34 +161,26 @@
 
     </section>
 
-    <section id="contact" class="mt-16">
-      <h2 class="text-2xl font-semibold mb-4 text-pink-300">Contact</h2>
-      <p class="text-pink-100 text-center">Available for freelance and full-time roles.<strong>Reach out!!</strong><a href="mailto:noluthandotinyiko@gmail.com" class="text-pink-300 hover:underline">email</a> or <a href="https://www.linkedin.com/in/msmolui-b718ab320/" target="_blank" class="text-pink-300 hover:underline">LinkedIn</a>.</p>
-    </section>
+    
+     
+  
 
-
-      <div class="max-w-lg mx-auto bg-white p-8 rounded-2xl shadow-md">
-    <h2 class="text-2xl font-bold text-center mb-6">Contact Me</h2>
-
+ 
+<section id="contact" class="mt-10 flex justify-center">
+  <div class="w-full max-w-md">
+    <h3 class="text-2xl font-semibold mb-4 text-pink-300 text-center">Contact Me</h3>
     <form id="contact-form" class="space-y-4">
-      <input type="text" name="name" placeholder="Your Name" required
-             class="w-full px-4 py-2 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500"/>
-
-      <input type="email" name="email" placeholder="Your Email" required
-             class="w-full px-4 py-2 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 text-pink"/>
-
-      <textarea name="message" rows="5" placeholder="Your Message" required
-                class="w-full px-4 py-2 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 text-pink"></textarea>
-
-      <button type="submit"
-              class="w-full bg-whitesmoke text-pink-400 py-2 rounded-xl hover:bg-blue-700 transition duration-200">
-        Send Message
-      </button>
+      <input type="text" id="name" placeholder="Your Name" required class="w-full p-2 rounded bg-gray-800 text-white" />
+      <input type="email" id="email" placeholder="Your Email" required class="w-full p-2 rounded bg-gray-800 text-white" />
+      <textarea id="message" placeholder="Your Message" required class="w-full p-2 rounded bg-gray-800 text-white"></textarea>
+      <button type="submit" class="bg-pink-500 hover:bg-pink-700 text-white font-bold py-2 px-4 rounded w-full">Send</button>
     </form>
+    <div id="success-msg" class="hidden text-green-500 text-center font-medium mt-4">Message sent successfully!</div>
+    <div id="error-msg" class="hidden text-red-500 text-center font-medium mt-4">There was an error. Please try again.</div>
+  </div>
+</section>
 
-    <div id="success-msg" class="hidden text-green-600 text-center font-medium mt-4">
-      ✅ Thank you! Your message has been sent.
-    </div>
+
 
     <div class="text-center mt-6 space-x-4">
       <p class="text-sm text-gray-600">Or reach out directly:</p>
@@ -193,8 +188,10 @@
       <a href="https://wa.me/075 086 6829" target="_blank" class="text-green-600 font-semibold hover:underline">WhatsApp</a>
     </div>
   </div>
+    </section>
 
   </main>
+  <p id="greeting" class="text-xl text-pink-400 mt-2 text-center"></p>
  <footer class="w-full py-8 text-center text-sm text-zinc-500">
   <div id="greeting" class="animate-bounce-slow mb-2"></div>
   <p class="italic">

@@ -1,57 +1,39 @@
  
 
-    document.addEventListener('DOMContentLoaded', () => {
-    
-      document.querySelectorAll('nav a').forEach(link => {
-        link.addEventListener('mouseenter', () => {
-          link.classList.add('drop-shadow-glow');
-        });
-        link.addEventListener('mouseleave', () => {
-          link.classList.remove('drop-shadow-glow');
-        });
-      });
 
-      // Animation on project image click
-      document.querySelectorAll('.project-card img').forEach(img => {
-        img.addEventListener('click', () => {
-          img.classList.add('animate-pop');
-          setTimeout(() => img.classList.remove('animate-pop'), 300);
-        });
+  document.addEventListener("DOMContentLoaded", () => {
+    
+    document.querySelectorAll("nav a").forEach((link) => {
+      link.addEventListener("mouseenter", () => {
+        link.classList.add("drop-shadow-glow");
+      });
+      link.addEventListener("mouseleave", () => {
+        link.classList.remove("drop-shadow-glow");
       });
     });
 
+
     function getGreeting() {
-    const hour = new Date().getHours();
-    if (hour < 12) return "Good morning ☀️";
-    if (hour < 18) return "Good afternoon 🌤️";
-    if (hour < 22) return "Good evening 🌙";
-    return "Up late? 🌌";
-  }
+  const hour = new Date().getHours();
 
-  function updateGreeting() {
-    document.getElementById("greeting").textContent = getGreeting();
-  }
+  if (hour < 12) return "🌞 Rise and shine! Let's make today amazing.";
+  if (hour < 18) return "🌤️ Hope your day’s going great! Keep pushing!";
+  if (hour < 22) return "🌙 Evening vibes in full swing. You've earned some rest.";
+  return "🌌 Burning the midnight oil? You're unstoppable!";
+}
 
-  updateGreeting();
-  setInterval(updateGreeting, 60000); // refresh every minute
 
-  const audio = document.getElementById("lofiAudio");
-  const toggleBtn = document.getElementById("vibeToggle");
-
-  toggleBtn.addEventListener("click", () => {
-    if (audio.paused) {
-      audio.play();
-      toggleBtn.textContent = "Pause the vibe 🎧";
-    } else {
-      audio.pause();
-      toggleBtn.textContent = "Play some chill 🎧";
+    function updateGreeting() {
+      const greetingEl = document.getElementById("greeting");
+      if (greetingEl) greetingEl.textContent = getGreeting();
     }
-  });
- 
- 
- 
- const form = document.getElementById("contact-form");
-    const successMsg = document.getElementById("success-msg");
+
+    updateGreeting();
+    setInterval(updateGreeting, 60000); 
+
+    
+    const form = document.getElementById("contact-form");
+    const msgBox = document.getElementById("success-msg") || document.getElementById("error-msg");
 
     form.addEventListener("submit", async (e) => {
       e.preventDefault();
@@ -59,7 +41,7 @@
       const formData = new FormData(form);
 
       try {
-        const response = await fetch("https://formspree.io/f/yourFormID", {
+        const response = await fetch("https://formspree.io/f/xblyygjw", {
           method: "POST",
           body: formData,
           headers: {
@@ -69,11 +51,16 @@
 
         if (response.ok) {
           form.reset();
-          successMsg.classList.remove("hidden");
+          msgBox.classList.remove("hidden", "text-red-600");
+          msgBox.classList.add("text-green-500");
+          msgBox.textContent = "Message sent successfully!";
         } else {
-          alert("There was an error. Please try again.");
+          throw new Error();
         }
-      } catch (error) {
-        alert("Error sending message.");
+      } catch {
+        msgBox.classList.remove("hidden", "text-green-500");
+        msgBox.classList.add("text-red-600");
+        msgBox.textContent = "There was an error. Please try again.";
       }
     });
+  });
