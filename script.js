@@ -11,13 +11,22 @@
 
   
   function getGreeting() {
-    const hour = new Date().getHours();
+  const now = new Date();
+  const hour = now.getHours();
+  const minutes = now.getMinutes().toString().padStart(2, "0");
+  const currentTime = `${hour}:${minutes}`;
 
-    if (hour < 12) return "🌞 Rise and shine! Let's make today amazing.";
-    if (hour < 18) return "🌤️ Hope your day’s going great! Keep pushing!";
-    if (hour < 22) return "🌙 Evening vibes in full swing. You've earned some rest.";
-    return "🌌 Burning the midnight oil? You're unstoppable!";
+  if (hour < 12) {
+    return `🌞 ${currentTime} — Good morning! Bright-eyed, caffeinated, and ready to squash bugs (and maybe create a few accidentally).`;
   }
+  if (hour < 18) {
+    return `🚀 ${currentTime} — In peak coding mode. Deploying ideas, refactoring chaos, and reviewing my own PRs like a senior dev.`;
+  }
+  if (hour < 22) {
+    return `🌙 ${currentTime} — Still coding — because great ideas don’t always stick to business hours. Also because I forgot to eat lunch.`;
+  }
+  return `🌌 ${currentTime} — It’s late, the world is quiet, and the code is… probably breaking. But hey, real devs debug in the dark.`;
+}
 
   function updateGreeting() {
     const greetingEl = document.getElementById("greeting");
