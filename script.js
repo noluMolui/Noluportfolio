@@ -17,15 +17,15 @@
   const currentTime = `${hour}:${minutes}`;
 
   if (hour < 12) {
-    return `🌞 ${currentTime} — Good morning! Bright-eyed, caffeinated, and ready to squash bugs (and maybe create a few accidentally).`;
+    return `🌞 ${currentTime} — Morning! Perfect time to hire your next dev. 😉`;
   }
   if (hour < 18) {
-    return `🚀 ${currentTime} — In peak coding mode. Deploying ideas, refactoring chaos, and reviewing my own PRs like a senior dev.`;
+    return `🚀 ${currentTime} — Afternoon grind! Let’s build something great together.`
   }
   if (hour < 22) {
-    return `🌙 ${currentTime} — Still coding — because great ideas don’t always stick to business hours. Also because I forgot to eat lunch.`;
+    return `🌙 ${currentTime} — Evening vibes. Still coding, still hireable.`;
   }
-  return `🌌 ${currentTime} — It’s late, the world is quiet, and the code is… probably breaking. But hey, real devs debug in the dark.`;
+  return `🌌 ${currentTime} — Late? Me too. Dedicated devs don't sleep. 😅`;
 }
 
   function updateGreeting() {
