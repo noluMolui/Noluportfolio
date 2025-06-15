@@ -1,13 +1,22 @@
- document.addEventListener("DOMContentLoaded", () => {
-  // Nav link hover effect
+document.addEventListener("DOMContentLoaded", () => {
+  // Hover effect
   document.querySelectorAll("nav a").forEach((link) => {
-    link.addEventListener("mouseenter", () => {
-      link.classList.add("drop-shadow-glow");
-    });
-    link.addEventListener("mouseleave", () => {
-      link.classList.remove("drop-shadow-glow");
-    });
+    link.addEventListener("mouseenter", () => link.classList.add("drop-shadow-glow"));
+    link.addEventListener("mouseleave", () => link.classList.remove("drop-shadow-glow"));
   });
+
+  // Dropdown toggle
+  const navToggle = document.getElementById("nav-toggle");
+  const navMenu = document.getElementById("nav-menu");
+
+  if (navToggle && navMenu) {
+    navToggle.addEventListener("click", () => {
+      navMenu.classList.toggle("hidden");
+    });
+  }
+
+
+
 
   
   function getGreeting() {
